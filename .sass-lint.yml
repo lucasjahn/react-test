@@ -1,0 +1,172 @@
+# File Options
+files:
+  include:
+    - 'app/src/sass/**/*.s+(a|c)ss'
+  ignore:
+    - node_modules/**/*.*
+    - 'app/src/sass/02_tools/fonts.scss'
+    - 'app/src/sass/03_generic/*'
+    - 'app/src/sass/04_vendors/*'
+
+options:
+  merge-default-rules: false
+  max-warnings: 50
+  cache-config: false
+
+# Rule Configuration
+#
+rules:
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 2
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - breakpoint
+        - mq
+        - size
+
+  no-warn: 2
+  no-debug: 2
+  no-ids: 2
+  no-important: 2
+  hex-notation:
+    - 2
+    -
+      style: uppercase
+  indentation:
+    - 2
+    -
+      size: 4
+  class-name-format:
+    - 2
+    -
+      allow-leading-underscore: true
+      convention: hyphenatedbem
+  clean-import-paths:
+    - 2
+    -
+      leading-underscore: false
+      filename-extension: false
+  property-sort-order:
+    - 2
+    -
+      order: concentric
+      ignore-custom-properties: true
+  variable-for-property:
+  - 2
+  -
+    properties:
+    - 'color'
+    - 'background-color'
+    - 'border-color'
+  brace-style:
+    - 2
+    -
+      style: stroustrup
+      allow-single-line: false
+  final-newline:
+    - 2
+    -
+      include: true
+  empty-line-between-blocks:
+    - 2
+    -
+      include: true
+      allow-single-line-rulesets: false
+  force-attribute-nesting: 1
+  force-element-nesting: 2
+  force-pseudo-nesting: 1
+  function-name-format:
+    - 2
+    -
+      allow-leading-underscore: true
+      convention: 'hyphenatedlowercase'
+  mixin-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+  nesting-depth:
+    - 2
+    -
+      max-depth: 3
+  no-attribute-selectors: 0
+  no-color-keywords: 2
+  no-combinators: 2
+  no-duplicate-properties:
+    - 2
+    -
+      exclude:
+        - src
+        - display
+        - background
+        - background-position
+        - background-size
+  no-empty-rulesets: 2
+  no-misspelled-properties: 2
+  no-qualifying-elements:
+    - 2
+    -
+      allow-element-with-attribute: false
+      allow-element-with-class: false
+      allow-element-with-id: false
+  no-trailing-whitespace: 2
+  no-transition-all: 2
+  no-universal-selectors: 2
+  no-vendor-prefixes:
+    - 2
+    -
+      ignore-non-standard: true
+  one-declaration-per-line: 2
+  placeholder-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+  pseudo-element: 2
+  quotes:
+    - 2
+    -
+      style: single
+  shorthand-values:
+    - 2
+    -
+      allowed-shorthands:
+        - 1
+        - 2
+  single-line-per-selector: 2
+  space-after-colon:
+    - 2
+    -
+      include: true
+  space-after-comma:
+    - 2
+    -
+      include: true
+  space-around-operator:
+    - 2
+    -
+      include: true
+  space-before-bang:
+    - 2
+    -
+      include: true
+  space-before-brace:
+    - 2
+    -
+      include: true
+  space-between-parens:
+    - 2
+    -
+      include: false
+  space-before-colon:
+    - 2
+    -
+      include: false
+  trailing-semicolon:
+    - 2
+    -
+      include: true
+  url-quotes: 2
