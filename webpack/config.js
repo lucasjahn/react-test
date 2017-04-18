@@ -8,7 +8,7 @@ const
 const CONFIGURATION = {
     rootPath: ROOT_PATH,
     appRoot: PATH.join(ROOT_PATH, `app`),
-    distPath: PATH.join(ROOT_PATH, `app/dist`),
+    distPath: PATH.join(ROOT_PATH, `public`),
     srcPathRelative: SRC_PATH_RELATIVE,
     srcPath: PATH.join(ROOT_PATH, SRC_PATH_RELATIVE),
 };

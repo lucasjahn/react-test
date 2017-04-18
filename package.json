@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "PwC Digital Services GmbH",
-  "license": "UNLICENSED",
-  "homepage": "https://github.com/ibrows/thibault-ipa-base#readme",
+  "author": "Lucas Jahn",
+  "license": "MIT",
   "scripts": {
     "test": "npm run eslint & npm run sasslint & npm run karma",
     "watch": "webpack-dev-server --config webpack/webpack.config.js --env.dev",
@@ -15,6 +14,10 @@
     "sasslint": "sass-lint --config ./.sass-lint.yml -v",
     "karma": "karma start karma.conf.js --single-run",
     "karma:watch": "karma start karma.conf.js"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
