@@ -29,7 +29,7 @@ const WEBPACK_CONFIG = {
                 loader: `import-glob`,
             },
             {
-                test: /^(?!.*\.spec\.js$).*\.js$/,
+                test: /^(?!.*\.spec\.js$).(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: `babel-loader`,
             },
@@ -46,5 +46,3 @@ const WEBPACK_CONFIG = {
 };
 
 module.exports = WEBPACK_CONFIG;
-
-

@@ -10,7 +10,7 @@ const PROD_CONFIG = {
     devtool: undefined,
     cache: false,
     entry: [
-        PATH.join(CONFIG.srcPath, `main.js`),
+        PATH.join(CONFIG.srcPath, `main.jsx`),
     ],
     module: {
         rules: [
