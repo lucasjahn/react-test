@@ -6,7 +6,7 @@ const WEBPACK_CONFIG = {
     context: CONFIG.rootPath,
     output: {
         path: CONFIG.distPath,
-        publicPath: `/dist`,
+        publicPath: `/public`,
         filename: `[name].js`,
         chunkFilename: `[hash]/js/[id].js`,
     },
@@ -29,9 +29,15 @@ const WEBPACK_CONFIG = {
                 loader: `import-glob`,
             },
             {
-                test: /^(?!.*\.spec\.js$).(js|jsx)$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: `babel-loader`,
+                use: [
+                  {
+                    loader: `babel-loader`,
+                    options: { presets: ['es2015']}
+                  }
+                ],
+
             },
             {
                 test: /\.(jpe?g|gif|png|ico)$/,

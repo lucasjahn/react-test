@@ -3,7 +3,7 @@
 const
     PATH = require(`path`),
     ROOT_PATH = PATH.join(__dirname, `../`),
-    SRC_PATH_RELATIVE = `app/src`;
+    SRC_PATH_RELATIVE = `app`;
 
 const CONFIGURATION = {
     rootPath: ROOT_PATH,
