@@ -4,9 +4,15 @@
     "es6": true,
     "jasmine": true
   },
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "globals": {
     "global": false,
@@ -108,6 +114,7 @@
     "require-yield": 0
   },
   "plugins": [
-    "promise"
+    "promise",
+    "react"
   ]
 }
