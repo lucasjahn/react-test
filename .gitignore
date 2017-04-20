@@ -3,3 +3,5 @@ app/dist
 .idea
 npm-debug.log
 coverage
+public/main.js
+public/main.js.map
