@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-  <h1>React Test</h1>,
-  document.getElementById('app')
+    <h1>Test</h1>,
+    document.getElementById('app')
 );

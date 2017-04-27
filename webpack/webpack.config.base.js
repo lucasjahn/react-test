@@ -6,7 +6,7 @@ const WEBPACK_CONFIG = {
     context: CONFIG.rootPath,
     output: {
         path: CONFIG.distPath,
-        publicPath: `/public`,
+        publicPath: `/`,
         filename: `[name].js`,
         chunkFilename: `[hash]/js/[id].js`,
     },
@@ -19,24 +19,26 @@ const WEBPACK_CONFIG = {
             poll: true,
         },
     },
+    resolve: {
+        extensions: [
+            `.js`,
+            `.jsx`,
+            `.scss`,
+        ],
+    },
     module: {
         rules: [
             // enable import globbing (i. e. *.twig) so we don`t have to import every twig file on our own
             {
                 enforce: `pre`,
-                test: /\.js/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: `import-glob`,
             },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: [
-                  {
-                    loader: `babel-loader`,
-                    options: { presets: ['es2015']}
-                  }
-                ],
+                loader: `babel-loader`,
 
             },
             {

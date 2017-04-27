@@ -19,5 +19,3 @@ const WEBPACK_CONFIG =  env => {
 };
 
 module.exports = WEBPACK_CONFIG;
-
-

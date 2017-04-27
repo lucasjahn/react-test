@@ -10,7 +10,7 @@ const DEV_CONFIG = {
     devtool: `#cheap-module-source-map`,
     cache: true,
     entry: [
-        PATH.join(CONFIG.srcPath, `main.jsx`),
+        PATH.join(CONFIG.rootPath, `main.js`),
     ],
     module: {
         rules: [
